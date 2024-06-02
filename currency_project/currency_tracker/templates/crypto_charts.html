@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Крипто Графики</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="{% static 'img/favicon.ico' %}">
+  </head>
+  <body>
+    {% include 'navbar.html' %}
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-6">
+      <div class="mx-auto max-w-7xl">
+        <div class="mt-5 grid gap-4">
+            <div class="p-4 border border-gray-200 rounded-lg">
+                <canvas id="btcUsdChart"></canvas>
+            </div>
+            <div class="p-4 border border-gray-200 rounded-lg">
+                <canvas id="ethUsdChart"></canvas>
+            </div>
+            <div class="p-4 border border-gray-200 rounded-lg">
+                <canvas id="btcRubChart"></canvas>
+            </div>
+            <div class="p-4 border border-gray-200 rounded-lg">
+                <canvas id="ethRubChart"></canvas>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script src="{% static 'js/sweetalert2@11.js' %}"></script>
+    <script src="{% static 'js/chart.js' %}"></script>
+    <script src="{% static 'js/crypto_charts.js' %}"></script>
+  </body>
+</html>

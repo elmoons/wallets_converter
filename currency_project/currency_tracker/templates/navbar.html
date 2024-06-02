@@ -1,0 +1,13 @@
+<nav class="bg-gray-800 px-6 py-3 text-white">
+    <ul class="flex space-x-8">
+        <li>
+            <a href="{% url 'index' %}" class="{% if request.resolver_match.url_name == 'index' %}text-[#87b5ff]{% else %}hover:text-gray-300 transition-colors{% endif %}">Главная</a>
+        </li>
+        <li>
+            <a href="{% url 'crypto_charts' %}" class="{% if request.resolver_match.url_name == 'crypto_charts' %}text-[#87b5ff]{% else %}hover:text-gray-300 transition-colors{% endif %}">Крипто Графики</a>
+        </li>
+        <li>
+            <a href="{% url 'converter' %}" class="{% if request.resolver_match.url_name == 'converter' %}text-[#87b5ff]{% else %}hover:text-gray-300 transition-colors{% endif %}">Конвертер</a>
+        </li>
+    </ul>
+</nav>

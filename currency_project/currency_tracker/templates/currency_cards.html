@@ -1,0 +1,10 @@
+{% for pair, rate in rates.items %}
+<div class="max-w-sm rounded overflow-hidden shadow-lg p-4 relative">
+    <button class="absolute top-2 right-2 text-sm bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded delete-btn"
+            data-base-currency="{{ pair.base_currency }}" data-target-currency="{{ pair.target_currency }}">Удалить</button>
+    <div class="font-bold text-xl mb-2">{{ pair.base_currency }} к {{ pair.target_currency }}</div>
+    <p class="text-gray-700 text-base">
+        Курс: {{ rate }}
+    </p>
+</div>
+{% endfor %}
